@@ -337,8 +337,14 @@
 # print(greet('estonian'))
 
 #===========Welcome===================================================================
+# def xor(a,b):
+#     # if (a != b):
+#     #     return True
+#     # return False
 
+#     return a != b
 
+# print(xor(False, False))
 
 
 
