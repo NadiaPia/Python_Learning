@@ -178,8 +178,8 @@ sentance = "!"
 sentance.join(['hi', 'my', 'name', 'John']) #join() does not mutate => it is a new list => print(sentance) will show initial sentance
 new_sentance = sentance.join(['hi', 'my', 'name', 'John'])
 
-#print(new_sentance)
-#print(sentance)
+print(new_sentance)
+print(sentance)
 
 #print(' '.join(['do','re','mi','fa'])) #shorter way
 

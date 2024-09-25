@@ -203,14 +203,150 @@
 # print(sum_array([6, 2, 1, 8, 10]))
 
 #===========altERnaTIng cAsE <=> ALTerNAtiNG CaSe======================
-def to_alternating_case(string):
-    arr = []
-    for el in string:
-        arr.append(el.lower())
-    print(arr)
-        
+# def to_alternating_case(string):
+#     arr = []
+#     for el in string:
+#         if (el.islower()):
+#              arr.append(el.upper())
+#         else:
+#             arr.append(el.lower())
+#     return(''.join(arr))
 
-(to_alternating_case("hello WORLD"))
+# print(to_alternating_case("hello WORLD"))
+
+#-------------------------------------------------------
+
+# def to_alternating_case(string):
+#     return ''.join([c.upper() if c.islower() else c.lower() for c in string]) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#------------the better way----------------------------------
+
+# def to_alternating_case(string):
+#     return string.swapcase()
+
+#-------------------------------------------------------
+#print(to_alternating_case("hello WORLD"))
+
+#===========Find numbers which are divisible by given number======================
+# def divisible_by(numbers, divisor):
+#     arr = []
+#     for el in numbers:
+#         if el % divisor == 0:
+#             arr.append(el)
+#     return arr
+
+# print(divisible_by([0,1,2,3,4,5,6], 4)) # [2,4,6]
+
+#-------------------------------------------
+
+# def divisible_by(numbers, divisor):
+#     return [x for x in numbers if x%divisor == 0] #!!!!!!!!!!!!!!!!!!!!!!!! return [x for x in numbers if x % divisor == 0] !!!!!!!!!!!!!!!
+
+# print(divisible_by([0,1,2,3,4,5,6], 4)) # [2,4,6]
+
+#===========Basic Mathematical Operations======================
+# def basic_op(operator, value1, value2):
+#     if (operator == '+'):
+#         return value1 + value2
+#     elif (operator == '-'):
+#         return value1 - value2
+#     elif (operator == '*'):
+#         return value1 * value2
+#     elif (operator == '/'):
+#         return value1 / value2    
+
+# print(basic_op('+', 4, 7))
+
+#===========Price of Mangoes======================
+
+# def mango(quantity, price):
+#     return (quantity - int(quantity / 3)) * price
+
+# print(mango(8, 5))
+# print(mango(3, 3))
+# print(mango(9, 5))
+
+#===========Printing Array elements with Comma delimiters======================
+
+# def print_array(arr):
+#     comma = ","
+#     return(comma.join(str(x) for x in arr))
+
+
+# print(print_array(["hello", "this", "is", "an", "array!"]))
+# print(print_array([1, 2, 3, 4, 5]))
+# print(print_array([False, True, False, False]))
+
+#===========Welcome===================================================================
+# welc = [ 
+#     ("english", "Welcome"),
+#     ("czech", "Vitejte"),
+#     ("danish", "Velkomst"),
+#     ("dutch", "Welkom"),
+#     ("estonian", "Tere tulemast"),
+#     ("finnish", "Tervetuloa"),
+#     ("flemish", "Welgekomen"),
+#     ("french", "Bienvenue"),
+#     ("german", "Willkommen"),
+#     ("italian", "Benvenuto"),
+#     ("latvian", "Gaidits"),
+#     ("lithuanian", "Laukiamas"),
+#     ("polish", "Witamy"),
+#     ("irish", "Failte"),
+#     ("spanish", "Bienvenido"),
+#     ("swedish", "Valkommen"),
+#     ("welsh", "Croeso"),
+# ]
+
+# def greet(language):
+#     if (language):
+#         for x in welc:
+#             if (x[0] == language):
+#                 return(x[1])
+#     return "Welcome"
+
+    
+    #return x[1] for x in welc if (x[0] == language)
+    
+
+#print(greet('swedish'))
+#return(welc[1][1])
+#-------------------------------------------------.get() for dictionaries!!!!!!!!!!!-----------------------
+# db = {
+#     'english': 'Welcome',
+#     'czech': 'Vitejte',
+#     'danish': 'Velkomst',
+#     'dutch': 'Welkom',
+#     'estonian': 'Tere tulemast',
+#     'finnish': 'Tervetuloa',
+#     'flemish': 'Welgekomen',
+#     'french': 'Bienvenue',
+#     'german': 'Willkommen',
+#     'irish': 'Failte',
+#     'italian': 'Benvenuto',
+#     'latvian': 'Gaidits',
+#     'lithuanian': 'Laukiamas',
+#     'polish': 'Witamy',
+#     'spanish': 'Bienvenido',
+#     'swedish': 'Valkommen',
+#     'welsh': 'Croeso',
+# }
+
+# def greet(language):    
+#     return db.get(language, 'Welcome')
+# print(greet('estonian'))
+
+#===========Welcome===================================================================
+
+
+
+
+
+
+
+
+
+
 
 
 
