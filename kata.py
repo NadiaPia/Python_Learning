@@ -346,14 +346,165 @@
 
 # print(xor(False, False))
 
+#===========Reversing Words in a String===================================================================
+# def reverse(st):    
+#     return " ".join(st.split(" ")[::-1])
+
+# print(reverse('Hello World'))  # 'World Hello'
+# print(reverse('Hi There.'))  
+
+#===========validate code with simple regex===================================================================
+
+# def validate_code(code):
+#     x = str(code)[0]
+#     return x == '1' or x == '2' or x == '3'
+
+# print(validate_code(523)) # True
+
+#-------------------the better way----------------
+# def validate_code(code):
+#     return str(code)[0] in '123'
+
+# print(validate_code(523)) # True
+
+#-----------------------------------------------------------print('f' in 'funny')
+
+#===========Simple Fun #352: Reagent Formula===================================================================
+
+# material1 and material2 cannot be selected at the same time
+# material3 and material4 cannot be selected at the same time
+# material5 and material6 must be selected at the same time
+# material7 or  material8 must be selected(at least one, or both)
+
+# def is_valid(formula):
+    
+#     if 1 in formula and 2 in formula:
+#         return False     
+#     if 3 in formula and 4 in formula:
+#         return False    
+#     if (5 in formula and 6 not in formula) or (6 in formula and 5 not in formula):
+#         return False   
+#     if 7 not in formula and 8 not in formula:
+#         return False   
+#     return True
 
 
+# print(is_valid([7, 8]))  # Output: True
 
 
+#===========Remove duplicates from list===================================================================
+
+# def distinct(seq):
+#     arr = []
+#     for x in seq:
+#         if x not in arr:
+#             arr.append(x)
+#     return(arr)
+    
+# print(distinct([9, 14, 5, 2, 5, 14]))
+#print((distinct([123, 9, 2, 2, 3, 3, 4, 4, 5, 123, 6, 7, 7, 7]))) # [1, 2]
+
+def distinct(seq):
+    return sorted(set(seq), key = seq.index)
+
+# Steps:
+# set(seq):
+
+# Converts the list seq into a set.
+# A set automatically removes duplicates because it cannot contain repeated elements.
+# However, the set does not preserve the original order of the elements (since sets are unordered collections).
+# sorted(..., key=seq.index):
+
+# After creating the set, the sorted function is used to reorder the elements.
+# The key=seq.index argument tells sorted to sort the elements based on their first occurrence in the original list seq.
+# seq.index(x) gives the index of the first appearance of x in seq. This means sorted will restore the original order of elements as they appeared in the list.
+
+#===========I love you, a little , a lot, passionately ... not at all===================================================================
+# expression = {
+#     1: "I love you",
+#     2: "a little",
+#     3: "a lot",
+#     4: "passionately",
+#     5: "madly",
+#     6: "not at all"
+# }
+
+# def how_much_i_love_you(nb_petals):    
+#     if(nb_petals <= 6):
+#         return expression[nb_petals]
+#     elif(nb_petals % 6 == 0):
+#         return expression[6]
+#     else:
+#         return expression[nb_petals % 6]     
+
+# print(how_much_i_love_you(173))
+
+#=========Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string=========================
+
+# def remove(st):
+#     arr = []
+#     for i,x in enumerate(st):
+#         if(x == '!' and i != len(st) - 1):
+#             continue       
+#         arr.append(x)
+#     return("".join(arr))        
+
+# print(remove("Hi! Hi!"))
 
 
+# def remove(st):
+#     arr = []
+#     for x in st:
+#         if x == '!':
+#             continue       
+#         arr.append(x)
+    
+#     return "".join(arr) + "!" 
+
+# print(remove("Hi"))
+#---------------------------the better way-----------------------
+# def remove(st):
+#     return st.replace("!", "") + "!"
+
+# print(remove("Hi"))
+# print(remove("Hi! Hi!"))
 
 
+#=============================================Love vs friendship=============================================
+# def words_to_marks(s):
+#     db = {
+#     'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 
+#     'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 
+#     'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 
+#     'w': 23, 'x': 24, 'y': 25, 'z': 26
+#     }  
+
+#     count = 0
+#     for x in s:
+#         count += (db[x])
+#     return count
+
+    
+
+# print(words_to_marks('knowledge')) # 75
+
+#----------------------the better way--------------------------.index()
+
+# def words_to_marks(s):
+#     return sum('_abcdefghijklmnopqrstuvwxyz'.index(e) for e in s)
+
+# print(words_to_marks('knowledge')) # 75
+
+#===================================================================================
+#basket = ['a', 'x', 'b', 'c', 'd','e', 'd']
+# basket = "_Nadia"
 
 
+# print(basket.index('i'))
 
+#===================================================V A P O R C O D E======================================================================
+
+def vaporcode(s):
+    return "  ".join("".join(s.upper().split(" ")))
+
+print(vaporcode("Lets go to the movies"))
