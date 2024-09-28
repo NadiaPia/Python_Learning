@@ -504,7 +504,47 @@ def distinct(seq):
 
 #===================================================V A P O R C O D E======================================================================
 
-def vaporcode(s):
-    return "  ".join("".join(s.upper().split(" ")))
+# def vaporcode(s):
+#     return "  ".join("".join(s.upper().split(" ")))
 
-print(vaporcode("Lets go to the movies"))
+# print(vaporcode("Lets go to the movies"))
+
+#===================================================Vowel Count======================================================================
+# def get_count(sentence):
+#     arr = ["a", "e", "i", "o", "u"]
+#     count = 0
+#     for x in sentence:
+#         if (x in arr ):
+#             count += 1
+#     return count
+
+# print(get_count("Hello, Nadiaa"))
+# ---------------------the better way-------------------------------------
+
+# def get_count(sentence):
+#     return sum(c in 'aeiou' for c in sentence)
+
+# print(get_count("Hello, Nadiaa"))
+
+#==========================================Rock Paper Scissors Lizard Spock======================================================
+
+# def rpsls(pl1, pl2):    
+#     game = {
+#         "scissors": ["paper", "lizard"],
+#         "rock": ["lizard", "scissors"],
+#         "lizard": ["spock", "paper"],
+#         "spock": ["scissors", "rock"],      
+#         "paper": ["rock", "spock"]
+#     }
+
+#     print(game[pl1])
+#     if (pl1 == pl2):
+#         return "Draw!"
+
+#     elif (pl2 in game[pl1]):
+#         return "Player 1 Won!"
+
+#     else:
+#         return "Player 2 Won!"
+
+# print(rpsls("spock", "lizard"))
