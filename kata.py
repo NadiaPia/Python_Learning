@@ -548,3 +548,42 @@ def distinct(seq):
 #         return "Player 2 Won!"
 
 # print(rpsls("spock", "lizard"))
+
+#==========================================See You Next Happy Year======================================================
+
+
+# def next_happy_year(year): 
+#     counter = year + 1  # Start with the next year
+#     while True:
+#         # Convert year to string and check if all digits are distinct        
+#         if len(set(str(counter))) == len(str(counter)):
+#             return counter
+#         counter += 1        
+
+# print(next_happy_year(3331))  # Output: 3401
+
+#-----------another way------------------------------------------------------
+# def next_happy_year(year):
+#     year += 1
+    
+#     while len(set(str(year))) != 4:
+#         year += 1    
+#     return year
+
+# print(next_happy_year(3331))  # Output: 3401
+
+
+#==========================================Find the calculation type======================================================
+# def calc_type(a, b, res):
+#     if (a + b == res):
+#         return "addition"
+#     elif (a - b == res):
+#         return "subtraction"
+#     elif (a / b == res):
+#         return "division"
+#     elif (a * b == res):
+#         return "multiplication"
+    
+# print(calc_type(10, 4, 40)) # "addition"
+
+#==========================================Find the calculation type======================================================
