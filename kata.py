@@ -586,4 +586,15 @@ def distinct(seq):
     
 # print(calc_type(10, 4, 40)) # "addition"
 
-#==========================================Find the calculation type======================================================
+#==========================================Sum of Array Averages=====================================================
+
+def sum_average(arr):
+    new_arr = []
+    for x in arr:
+        new_arr.append(sum(x) / len(x))
+    print(new_arr)
+    return int(sum(new_arr) // 1)
+
+    
+    
+print(sum_average([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])) # 117
