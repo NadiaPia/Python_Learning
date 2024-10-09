@@ -588,13 +588,36 @@ def distinct(seq):
 
 #==========================================Sum of Array Averages=====================================================
 
-def sum_average(arr):
-    new_arr = []
-    for x in arr:
-        new_arr.append(sum(x) / len(x))
-    print(new_arr)
-    return int(sum(new_arr) // 1)
+# def sum_average(arr):
+#     new_arr = []
+#     for x in arr:
+#         new_arr.append(sum(x) / len(x))
+#     print(new_arr)
+#     return int(sum(new_arr) // 1)  #The // operator performs integer (floor) division. It divides two numbers and rounds down the result to the nearest integer.
+    
+# print(sum_average([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])) # 117
 
-    
-    
-print(sum_average([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])) # 117
+#==========================================Highest and Lowest=====================================================
+
+# def high_and_low(numbers):
+#     arr = numbers.split(" ")
+#     arr2 = []
+#     for x in arr:
+#         arr2.append(int(x))
+#     print(arr2)
+#     arr
+ 
+# print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4")) #, "42 -9"
+
+
+def mim_max(arr):
+    a = arr[0]
+    b = arr[0]
+    for el in arr:
+        if (el >= a):
+            a = el
+        elif (el <= b):
+            b = el
+    return a - b
+
+print(mim_max([1,2,3,4,5,6, -2,100, -100, 100]))
