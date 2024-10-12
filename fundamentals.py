@@ -185,18 +185,83 @@
 #=================================Walrus operator====================
 # a new feature
 a = 'heloooooooooooooooooo'
-# if (len(a) > 10):
-#     print(f'too long {len(a)} elements')
+# if (len(a) > 10):  # using len(a) one
+#     print(f'too long {len(a)} elements') # using len(a) 2
 
-# to avoid a repetition len(a) in this cod< we will use a walrus
+# to avoid a repetition of the expression 'len(a) in line this code we will use a walrus
 
 # if ((n := len(a)) > 10):
 #     print(f'too long {n} elements')
 
-while ((n := len(a)) > 1):
-    print(n)
+# while ((n := len(a)) > 1):
+#     print(n)
     
-    a = a[:-1]
-print(a)
+#     a = a[:-1]
+# print(a)
+
+
+#=================================Scope====================
+#Scope - what variables do I have access to?
+#1 start with local
+#2 parent local
+#3 Global
+
+
+
+#we don't have an access to the total as it is inside the function, not a global variable
+
+# def some_func():
+#     total = 100
+# print(total)
+
+#===========================Global key word====================
+
+# total = 0
+# print(f"this is total{total}")
+
+# def count():
+#     total += 1
+#     return total
+
+# print(count())  #UnboundLocalError: cannot access local variable 'total' where it is not associated with a value
+
+# in this case use the word global:
+
+# def count():
+#     global total # not good practice as this fuction increases the global total!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     total += 1
+#     return total
+
+
+# print(count())
+# print(count())
+# print(count())
+
+#----------------------------------------------------------------------------------------------------
+# def count(total):
+    
+#     total += 1
+#     return total
+
+
+# print(count(total))
+# print(count(total))
+# print(count(total))
+# # if we want 3 we can do this:
+# print(count(count(count(total))))
+
+
+#==========================nonlocal====================
+# def outer():
+#     x = 'local'
+#     def inner():
+#         nonlocal x  # take from parent local
+#         x = 'nonlocal'
+#         print("inner", x)
+
+#     inner()
+#     print("outer:", x)
+
+# outer() 
     
 

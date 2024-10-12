@@ -609,15 +609,16 @@ def distinct(seq):
  
 # print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4")) #, "42 -9"
 
+#==========================================min_max=====================================================
 
-def mim_max(arr):
-    a = arr[0]
-    b = arr[0]
-    for el in arr:
-        if (el >= a):
-            a = el
-        elif (el <= b):
-            b = el
-    return a - b
+# def mim_max(arr):
+#     a = arr[0]
+#     b = arr[0]
+#     for el in arr:
+#         if (el >= a):
+#             a = el
+#         elif (el <= b):
+#             b = el
+#     return a - b
 
-print(mim_max([1,2,3,4,5,6, -2,100, -100, 100]))
+# print(mim_max([1,2,3,4,5,6, -2,100, -100, 100]))
