@@ -216,6 +216,12 @@ archer1 = Archer('Robin', 100)
 wizard1.attack()
 archer1.attack()
 
+print(isinstance(wizard1, Wizard))   # True
+print(isinstance(wizard1, User))     # True
+print(isinstance(wizard1, object))   # bcs wizard1 inherits from Wizard, User and higher object base class which Python comes with
+
+
+
 #print(wizard1.sign_in()) #Lodded in
 
 
