@@ -374,9 +374,134 @@
 #shows all methods tha the wizard object has. It is useful when we try to figure out what we have access to
 
 #=====================================Dunder Methods============================
+#methods that Python recognizes
+
+# class Toy():
+#     def __init__(self, color, age):
+#         self.color = color
+#         self.age = age
+#         self.my_dict = {
+#             'name': 'yoyo',
+#             'has pets': False
+#         }
+#     #we can modify the dunder methods:
+#     def __str__(self):
+#         return f'{self.color}'
+    
+#     def __len__(self):
+#         return 5
+    
+#     def __call__(self):
+#         return 'yess?'
+    
+#     def __getitem__(self, i):
+#         return self.my_dict[i]
+    
+
+# action_figure = Toy('red', 0)
+# print(action_figure.__str__())
+# #the same if
+# print(str(action_figure))
+# print(len(action_figure))
+# print(action_figure()) #bcs we use call dunder method
+# print(action_figure['name'])
+
+#=====================================Extending list============================
+
+# class SuperList(list):
+#     def __len__(self):
+#         return 1000
+    
+# super_list1 = SuperList()
+
+# #print(len(super_list1))
+# super_list1.append(5)
+# super_list1.append(3)
+
+# print(super_list1[0])
+# print(issubclass(SuperList, list))
+
+
+#===================================================Multiple inheritance======================
+# class User():
+#     def sign_in(self):
+#         print('logged in')
+
+# class Wizard(User):
+#     def __init__(self, name, power):
+#         self.name = name
+#         self.power = power
+
+#     def attack(self):
+#         print(f'attacking with power of {self.power}')
+
+# class Archer(User):
+#     def __init__(self, name, arrows):
+#         self.name = name
+#         self.arrows = arrows
+
+#     def check_arrows(self):
+#         print(f'{self.arrows} remaining')
+
+#     def run(self):
+#         print('ran really fast')
+
+# class HybridBorg(Wizard, Archer):
+#     def __init__(self, name, power, arrows):
+#         Archer.__init__(self, name, arrows)
+#         Wizard.__init__(self, name, power)
+
+
+# wizard1 = Wizard('Merlin', 50)
+# archer1 = Archer('Robin', 100)
+# hb1 = HybridBorg('borgie', 60, 100)
+
+# print(hb1.run())
+# print(hb1.check_arrows())
+# print(hb1.attack())
+# print(hb1.sign_in())
+
+
+#===================================================method resolution order======================
+
+# class A:
+#     num = 10
+
+# class B(A):
+#     num = 1
+    
+
+# class C(A):
+#     pass
+
+# class D(B, C):
+#     pass
+
+
+#print(D.num)
+#print(D.mro()) # method resolution order
+# D.__str__
 
 
 
+#------------------------------------------------------
+# class X:
+#     pass
+
+# class Y:
+#     pass
+
+# class Z:
+#     pass
 
 
+# class A(X, Y):
+#     pass
 
+# class B(Y, Z):
+#     pass
+
+# class M(B, A, Z):
+#     pass
+# print(M.__mro__) #(<class '__main__.M'>, <class '__main__.B'>, <class '__main__.A'>, <class '__main__.X'>, <class '__main__.Y'>, <class '__main__.Z'>, <class 'object'>)
+    
